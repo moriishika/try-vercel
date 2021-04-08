@@ -14,6 +14,7 @@ function App() {
   }, []);
   return (
     <main>
+      <input type="file">upload file</input>
       <h1>Create React App + Go API</h1>
       <h2>
         Deployed with{' '}
