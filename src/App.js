@@ -14,7 +14,7 @@ function App() {
   }, []);
   return (
     <main>
-      <input type="file" name="mantap"></input>
+      <input type="file" name="mantap" />
       <h1>Create React App + Go API</h1>
       <h2>
         Deployed with{' '}
