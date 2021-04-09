@@ -3,54 +3,31 @@ import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
-  const [date, setDate] = useState(null);
-  useEffect(() => {
-    async function getDate() {
-      const res = await fetch('/api/date');
-      const newDate = await res.text();
-      setDate(newDate);
-    }
-    getDate();
-  }, []);
+  // const [date, setDate] = useState(null);
+  // useEffect(() => {
+  //   async function getDate() {
+  //     const res = await fetch('/api/date');
+  //     const newDate = await res.text();
+  //     setDate(newDate);
+  //   }
+  //   getDate();
+  // }, []);
   return (
     <main>
-      <input type="file" name="mantap" />
-      <h1>Create React App + Go API</h1>
-      <h2>
-        Deployed with{' '}
-        <a
-          href="https://vercel.com/docs"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          Vercel
-        </a>
-        !
-      </h2>
-      <p>
-        <a
-          href="https://github.com/vercel/vercel/tree/master/examples/create-react-app"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          This project
-        </a>{' '}
-        was bootstrapped with{' '}
-        <a href="https://facebook.github.io/create-react-app/">
-          Create React App
-        </a>{' '}
-        and contains three directories, <code>/public</code> for static assets,{' '}
-        <code>/src</code> for components and content, and <code>/api</code>{' '}
-        which contains a serverless <a href="https://golang.org/">Go</a>{' '}
-        function. See{' '}
-        <a href="/api/date">
-          <code>api/date</code> for the Date API with Go
-        </a>
-        .
-      </p>
-      <br />
-      <h2>The date according to Go is:</h2>
-      <p>{date ? date : 'Loading date...'}</p>
+      <div className="flex-col p-4 bg-white justify-betweem content-between">
+        <div className="flex justify-between items-center">
+          <h1 className="font-bold text-2xl">Bagi Barang</h1>
+          <select className="py-0 px-1 w-40 h-7 border-b-2 border-0">
+            <option>Pilih Wilayah</option>
+            <option>Bali</option>
+            <option>Jakarta</option>
+            <option>Jawa Barat</option>
+            <option>Jawa Timur</option>
+            <option>Jawa Tengah</option>
+          </select>
+        </div>
+        <input type="text" className="border-1 mt-3.5 py-3 pl-4 border-black focus:ring-0 focus:border-red-500 block w-full shadow-sm sm:text-sm rounded-md" placeholder="Mau nyari barang apa hari ini?"/>
+      </div>
     </main>
   );
 }
