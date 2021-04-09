@@ -28,6 +28,13 @@ function App() {
         </div>
         <input type="text" className="border-1 mt-3.5 py-3 pl-4 border-black focus:ring-0 focus:border-red-500 block w-full shadow-sm sm:text-sm rounded-md" placeholder="Mau nyari barang apa hari ini?"/>
       </div>
+      <div className="p-4 pr-6 flex justify-between items-center">
+        <div className="flex items-center">
+          <img src="MoriiUta.png" className="w-12 rounded-full"/>
+          <p className="ml-3 font-medium">Morii Uta</p>
+        </div>
+        <button className="bg-white h-8 px-2 rounded-xl shadow-sm font-medium">Laporkan</button>
+      </div>
     </main>
   );
 }
